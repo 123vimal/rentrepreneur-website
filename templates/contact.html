@@ -1,0 +1,88 @@
+{% extends "start_buisness_with_me.html" %}
+
+{% block  title %}Contact{% endblock title %}
+
+{% block body %}
+<div "container mb-3 py-4">
+  <h1 class="text-center">Contact Us</h1>
+  <form class="row g-3" method="post" action="/contact">
+    {% csrf_token %}  
+    <div class="col-md-2 ">
+      <label for="validationDefault01" class="form-label">First name</label>
+      <input type="text" class="form-control" name="Firstname"  id="validationDefault01" value="Mark" required>
+    </div>
+    <div class="col-md-4">
+      <label for="validationDefault02" class="form-label">Last name</label>
+      <input type="text" class="form-control" name="Lastname" id="validationDefault02" value="Otto" required>
+    </div>
+
+    <div class="col-md-4">
+      <label for="validationDefault03" class="form-label">Phone</label>
+      <input type="text" class="form-control" name="Phone" id="validationDefault03" required>
+    </div>
+
+    <div class="col-md-4">
+      <label for="validationDefaultUsername" class="form-label">Username</label>
+      <div class="input-group">
+        <span class="input-group-text" id="inputGroupPrepend2">@</span>
+        <input type="text" class="form-control" name="Username" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="validationDefault03" class="form-label">City</label>
+      <input type="text" class="form-control" name="City" id="validationDefault03" required>
+    </div>
+    <div class="col-md-3">
+      <label for="validationDefault05" class="form-label">State</label>
+      <select class="form-select" name="State" id="validationDefault05" required>
+        <option selected disabled value="">Choose...</option>
+        <option>Andhra Pradesh</option>
+            <option>Arunachal Pradesh</option>
+            <option>Andhra Pradesh</option>
+            <option>Assam</option>
+            <option>Andhra Pradesh</option>
+            <option>Bihar</option>
+            <option>Chhattisgarh</option>
+            <option>Goa</option>
+            <option>Gujarat</option>
+            <option>Haryana	</option>
+            <option>Himachal Pradesh</option>
+            <option>Jammu and Kashmir</option>
+            <option>Jharkhand</option>
+            <option>Karnataka</option>
+            <option>Kerala</option>
+            <option>Madhya Pradesh</option>
+            <option>Maharashtra</option>
+            <option>Manipur</option>
+            <option>Meghalaya</option>
+            <option>Mizoram</option>
+            <option>Nagaland</option>
+            <option>Odisha</option>
+            <option>Punjab</option>
+            <option>Rajasthan</option>
+            <option>Sikkim</option>
+            <option>Tamil Nadu</option>
+            <option>Tripura</option>
+            <option>Uttar Pradesh</option>
+            <option>Uttarakhand</option>
+            <option>West Bengal</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <label for="validationDefault06" class="form-label">PinCode</label>
+      <input type="text" class="form-control" name="PinCode" id="validationDefault06" required>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-control-color" type="checkbox" value="" id="invalidCheck2" required>
+        <label class="form-check-label" for="invalidCheck2">
+          Agree to terms and conditions
+        </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-outline-success" type="submit">Submit form</button>
+    </div>
+  </form>
+
+{% endblock body %}
